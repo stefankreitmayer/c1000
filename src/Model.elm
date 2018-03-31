@@ -17,4 +17,4 @@ initialModel : Model
 initialModel =
   { ui = initialUi
   , layer = initialLayer
-  , behaviors = [ Behavior.shiftRight, Behavior.growUp, Behavior.leftTwin, Behavior.shiftDownIfTotalCountDividesBy5, Behavior.nonBlank ] }
+  , behaviors = [ Behavior.shiftRight 1, Behavior.growUp, Behavior.leftTwin, Behavior.shiftDownIfTotalCountDividesBy5, Behavior.shiftTowardsCenter, Behavior.nonBlank ] }
