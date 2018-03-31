@@ -1,0 +1,34 @@
+body{
+  font-family: Courier, monospace, sans-serif;
+  font-size: 14px;
+  color: #222;
+  margin: 0;
+}
+
+.UserSelectNone{
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+
+.Layer{
+  border: 1px solid;
+  border-spacing:0;
+}
+
+.Layer tr{
+  border: 0;
+}
+
+.Layer td{
+  width: 10px;
+  height: 10px;
+}
+
+.PxOn{
+  background: #222;
+}
