@@ -11,13 +11,13 @@ import Debug exposing (log)
 
 
 update : Msg -> Model -> (Model, Cmd Msg)
-update action ({ui,layer} as model) =
+update action ({ui,layer,behaviors} as model) =
   case action of
     Tick currentTime ->
-      ({ model | layer = layer |> updateLayer (floor currentTime) }, Cmd.none)
+      ({ model | layer = layer |> applyBehaviors behaviors }, Cmd.none)
 
 
-updateLayer someNumber layer =
-  Dict.empty
-  |> Dict.insert (someNumber%40, someNumber%25) True
-
+applyBehaviors behaviors layer =
+  behaviors
+  |> List.foldl (\behavior l -> l |> behavior) layer
+  |> trimLayer
